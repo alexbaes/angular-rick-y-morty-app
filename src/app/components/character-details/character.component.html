@@ -1,0 +1,51 @@
+<div class="container">
+  <h1>CHARACTER DETAILS</h1>
+
+  <div class="row" *ngIf="character">
+    <div class="col-xs-12 col-sm-6">
+      <h2>Name: <strong> {{character.name}}</strong></h2>
+      <button class="btn btn-warning" (click)="showDetails()">Show all details</button>
+      <mat-accordion *ngIf="show">
+        <mat-expansion-panel (opened)="panelOpenState = true"
+                             (closed)="panelOpenState = false">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              <span class="h5">Status</span>
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <p>{{character.status}}</p>
+        </mat-expansion-panel>
+        <mat-expansion-panel (opened)="panelOpenState = true"
+                             (closed)="panelOpenState = false">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              <span class="h5">Species</span>
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <p>{{character.species}}</p>
+        </mat-expansion-panel>
+        <mat-expansion-panel (opened)="panelOpenState = true"
+                             (closed)="panelOpenState = false">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              <span class="h5">Type</span>
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <p>{{character.type}}</p>
+        </mat-expansion-panel>
+        <mat-expansion-panel (opened)="panelOpenState = true"
+                             (closed)="panelOpenState = false">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              <span class="h5">Image</span>
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <img src="{{character.image}}">
+        </mat-expansion-panel>
+      </mat-accordion>
+    </div>
+    <div class="col-xs-12 col-sm-6">
+      <a class="btn btn-primary" routerLink="/">Back</a>
+    </div>
+  </div>
+</div>
