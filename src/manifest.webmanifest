@@ -1,7 +1,7 @@
 {
   "name": "rickyMortyApp",
   "short_name": "rickyMortyApp",
-  "theme_color": "#00FFAB",
+  "theme_color": "#00FFAC",
   "background_color": "#fafafa",
   "display": "standalone",
   "scope": "./",
